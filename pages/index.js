@@ -31,20 +31,20 @@ function GlobalStyle() {
 }
 
 function Titulo(props) {
-  const Tag = props.tag;
+  const Tag = props.tag || 'h1';
   return (
-    <div>
+    <>
       <Tag>{props.children}</Tag>
       <style jsx>{`
-          ${Tag} {
-          color: ${appConfig.theme.colors.neutrals['900']};
-          font-size: 24px;
-          font-weight: 600px;
-          }
-      `}   </style></div>
+            ${Tag} {
+                color: ${appConfig.theme.colors.neutrals['000']};
+                font-size: 24px;
+                font-weight: 600;
+            }
+            `}</style>
+    </>
   );
 }
-
 // Componente React
 /*
 function HomePage() {
@@ -69,8 +69,8 @@ export default function PaginaInicial() {
       <Box
         styleSheet={{
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          backgroundColor: appConfig.theme.colors.primary[500],
-          backgroundImage: 'url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)',
+          backgroundColor: appConfig.theme.colors.primary[501],
+          backgroundImage: 'url(https://virtualbackgrounds.site/wp-content/uploads/2020/10/board-games-collection-shelf.jpg)',
           backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundBlendMode: 'multiply',
         }}
       >
